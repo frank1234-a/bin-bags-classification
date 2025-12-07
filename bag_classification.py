@@ -6,7 +6,7 @@ from PIL import Image
 # Load the trained model
 @st.cache_resource
 def load_cnn_model():
-    model = load_model("bin_bags_classification_model.h5")
+    model = load_model("bin_bags_classification_model.keras")
     return model
 
 model = load_cnn_model()
