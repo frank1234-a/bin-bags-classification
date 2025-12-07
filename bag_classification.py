@@ -30,7 +30,7 @@ if uploaded_file is not None:
     class_labels = ["Garbage Bag", "Paper Bag", "Plastic Bag"]  
 
     prediction = model.predict(img_array)
-    predicted_index = np.argmax(prediction, axis=1)
+    predicted_index = np.argmax(prediction, axis=1)[0]
     predicted_class = class_labels[predicted_index]
 
     st.success(f"Prediction: {predicted_class}")
